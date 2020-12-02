@@ -4,9 +4,7 @@ import numpy
 
 
 def combinations_list_comprehension(entry_list, r):
-    combinations_tuple = [combination for combination in itertools.combinations(entries_list, r) if sum(list(combination)) == 2020]
-    print(f"combination: {combinations_tuple} = 2020")
-    return numpy.prod(list(combinations_tuple))
+    return numpy.prod(list([combination for combination in itertools.combinations(entries_list, r) if sum(list(combination)) == 2020]))
 
 
 def combinations_r_2(entry_list):
